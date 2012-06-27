@@ -1,14 +1,41 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <ice:form
-        xmlns:h="http://java.sun.com/jsf/html"
-        xmlns:f="http://java.sun.com/jsf/core"
-        xmlns:ice="http://www.icesoft.com/icefaces/component"
-        id="navigationMenuForm">
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:c="http://java.sun.com/jsp/jstl/core"
+    xmlns:ace="http://www.icefaces.org/icefaces/components"
+    xmlns:ice="http://www.icesoft.com/icefaces/component"
+    xmlns:icecore="http://www.icefaces.org/icefaces/core"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    id="navigationMenuForm">
     <div>
         <h1>
-                    <ice:outputText value="Aqui va el menu"/>
-              </h1>
+            <ice:outputText value="Menu Principal"/>
+        </h1>        
+        <h:panelGrid columns="1" columnClasses="menuStyle">
+            <ace:menu id="menu" type="plain">
+                <ace:submenu label="Proyectos" id="proyectos">
+                    <ace:menuItem id="nuevoProyecto" value="Nuevo"
+                                  action="#{Menu.firedAction()}"
+                                  helpText="Agregar un proyecto">                    
+                    </ace:menuItem>
+                </ace:submenu>
+                <ace:submenu label="Talento Humano" id="talentoHumano">
+                    <ace:menuItem id="nuevoTalento" value="Nuevo"
+                                  helpText="Agregar Talento Humano">                    
+                    </ace:menuItem>
+                </ace:submenu>
+                <ace:submenu label="Empresas" id="empresas">
+                    <ace:menuItem id="nuevaEmpresa" value="Alta"
+                                  helpText="Lol???">                    
+                    </ace:menuItem>
+                </ace:submenu>
+                <ace:menuItem id="salir" value="Salir"
+                              helpText="Salir???">                    
+                </ace:menuItem>
+            </ace:menu>
+        </h:panelGrid>
     </div>
 </ice:form>
 
