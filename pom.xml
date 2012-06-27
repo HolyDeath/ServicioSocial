@@ -8,6 +8,14 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
+    <repositories>
+        <repository>
+            <id>ICEfaces Repo</id>
+            <name>ICEfaces Repo</name>
+            <url>http://anonsvn.icefaces.org/repo/maven2/releases/</url>
+        </repository>
+
+    </repositories>
     <name>CfieIE</name>
 
     <properties>
@@ -72,6 +80,28 @@
             <groupId>org.icefaces</groupId>
             <artifactId>icefaces-compat</artifactId>
             <version>3.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.icefaces</groupId>
+            <artifactId>icefaces-facelets</artifactId>
+            <version>1.8.2</version>
+            <scope>compile</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>javax.el</groupId>
+                    <artifactId>el-api</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>javax.servlet</groupId>
+                    <artifactId>servlet-api</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.icefaces</groupId>
+            <artifactId>icefaces-comps</artifactId>
+            <version>1.8.2</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 

@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<div
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ice="http://www.icesoft.com/icefaces/component"
+    xmlns:ace="http://www.icefaces.org/icefaces/components">
+
+    <ice:panelGroup>
+        <!--
+           Main Component content;
+           controls which content to display for the respective navigation
+        -->
+        <h2>
+            <!--ice:outputText
+                value="#{navigation.selectedPanel.menuContentTitle}"/-->
+            <ice:outputText value="Contenido"/>
+        </h2>
+
+        <div class="demoWindow">
+            <!--ui:include src="#{navigation.selectedPanel.menuContentInclusionFile}"/-->
+            <ace:panel toggleable="true" header="Ice test" collapsed="true">
+            <ice:inputText value="Hello World from facelets!!
+                           This works in both web browsers!!"/>
+            </ace:panel>
+        </div>
+        <br/>
+    </ice:panelGroup>
+</div>
+
