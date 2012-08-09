@@ -12,31 +12,30 @@
         <ui:insert name="faceletHeader">Cabecera</ui:insert>
     </h:head>
 
-    <h:body>
-        <div id="top">
-            <ui:insert name="header">
-                <h1>
-                    <ice:outputText value="Cabecera para el ejemplo -Titulo-"/>
-                </h1>
-                <ice:outputText value="Aqui se añaden imagencitas y cosas bonitas :D"/>
-            </ui:insert>
-        </div>
-        <div>
-            <div id="left">
-                <ui:insert name="navigation">
-                    <ui:include src="./menu.xhtml" />
+    <h:body>        
+            <div id="top">
+                <ui:insert name="header">
+                    <h1>
+                        <ice:outputText value="Cabecera para el ejemplo -Titulo-"/>
+                    </h1>
+                    <ice:outputText value="Aqui se añaden imagencitas y cosas bonitas :D"/>
                 </ui:insert>
             </div>
-            <div id="content" class="left_content">
-                <ui:insert name="content">
-                    <ui:include src="./contenido.xhtml" />
-                </ui:insert>
+            <div>
+                <div id="left">
+                    <ui:insert name="navigation">
+                        <ui:include src="./menu.xhtml" />
+                    </ui:insert>
+                </div>
+                <div id="content" class="left_content">
+                    <ui:insert name="content">                    
+                        <ui:include src="#{Menu.file}" />
+                    </ui:insert>
+                </div>
             </div>
-        </div>
-        <div id="bottom">
-            <ui:insert name="footer">Bottom</ui:insert>
-        </div>
-
+            <div id="bottom">
+                <ui:insert name="footer">Bottom</ui:insert>
+            </div>        
     </h:body>
 
 </html>

@@ -17,13 +17,16 @@
             <ace:menu id="menu" type="plain">
                 <ace:submenu label="Proyectos" id="proyectos">
                     <ace:menuItem id="nuevoProyecto" value="Nuevo"
-                                  action="#{Menu.firedAction()}"
-                                  helpText="Agregar un proyecto">                    
+                                  actionListener="#{Menu.firedAction}"
+                                  helpText="Agregar un proyecto">
+                        <f:attribute name="pagina" value="./contenido.xhtml"/>
                     </ace:menuItem>
                 </ace:submenu>
                 <ace:submenu label="Talento Humano" id="talentoHumano">
                     <ace:menuItem id="nuevoTalento" value="Nuevo"
-                                  helpText="Agregar Talento Humano">                    
+                                  actionListener="#{Menu.firedAction}"
+                                  helpText="Agregar Talento Humano"> 
+                        <f:attribute name="pagina" value="./hello.xhtml"/>
                     </ace:menuItem>
                 </ace:submenu>
                 <ace:submenu label="Empresas" id="empresas">
